@@ -3,6 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import Racine from '../components/Racine'
 import Accueil from '../components/Accueil'
 import Abonner from '../components/Abonner'
+import Details from '../components/Details'
 
 const mesRoutes = createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const mesRoutes = createBrowserRouter([
             {
                 path: '/abonner',
                 element: <Abonner />
+            },
+            {
+                path: '/details/:id',
+                element: <Details />
             }
         ]
     }

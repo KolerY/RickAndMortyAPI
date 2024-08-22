@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Accueil = () => {
   const [characters, setCharacters] = useState([]);
@@ -69,16 +70,18 @@ const Accueil = () => {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredCharacters.map(character => (
-            <div key={character.id} className="relative bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
-              <img src={character.image} alt={character.name} className="w-full h-56 object-cover" />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold">{character.name}</h2>
-                <p className={`text-xl font-medium ${getStatusClass(character.status)}`}>{character.status}</p>
+            <Link key={character.id} to={`/details/${character.id}`}>
+              <div className="relative bg-gray-800 text-white rounded-lg shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-2xl">
+                <img src={character.image} alt={character.name} className="w-full h-56 object-cover" />
+                <div className="p-4 text-center">
+                  <h2 className="text-xl font-semibold">{character.name}</h2>
+                  <p className={`text-xl font-medium ${getStatusClass(character.status)}`}>{character.status}</p>
+                </div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50">
+                  <span className="text-white text-2xl font-bold">Détails</span>
+                </div>
               </div>
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300 bg-black bg-opacity-50">
-                <span className="text-white text-2xl font-bold">Détails</span>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
