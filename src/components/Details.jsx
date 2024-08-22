@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FaMars, FaVenus } from 'react-icons/fa';
+import Background from '../assets/background.png';
+import '../Details.css';
 
 const Details = () => {
     const { id } = useParams();
@@ -67,7 +69,7 @@ const Details = () => {
     };
 
     return (
-        <div className="relative min-h-screen bg-gradient-to-r from-green-400 to-green-900 p-6 pt-20">
+        <div className="background-image relative min-h-screen p-6 pt-20">
             {/* Back to Accueil Button */}
             <div className="text-center mb-10">
                 <button
