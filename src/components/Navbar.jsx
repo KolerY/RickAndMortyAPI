@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from '../assets/Rick_and_Morty.svg.png'
 
 const Navbar = () => {
@@ -8,16 +8,31 @@ const Navbar = () => {
             <div className="container mx-auto max-w-screen-xl flex items-center justify-between">
                 {/* Logo */}
                 <div className="flex items-center space-x-3">
-                    <img src={Logo} alt="Logo" className="w-80" />
+                    <NavLink to="/"><img src={Logo} alt="Logo" className="w-80" /></NavLink>
                 </div>
-                {/* Navigation Links */}
-                <div className="space-x-8">
-                    <a className="text-white text-lg hover:text-gray-300">
-                        <Link to="/">Accueil</Link>
-                    </a>
-                    <a className="text-white text-lg hover:text-gray-300"><Link to="/abonner">
-                        Abonnés</Link>
-                    </a>
+                {/* Navigation */}
+                <div className="space-x-8 font-bold">
+                    <NavLink 
+                        to="/" 
+                        className={({ isActive }) => 
+                            isActive 
+                                ? "text-white text-2xl border-b-2 border-white"
+                                : "text-white text-2xl hover:text-gray-300"
+                        }
+                        end
+                    >
+                        Accueil
+                    </NavLink>
+                    <NavLink 
+                        to="/abonner" 
+                        className={({ isActive }) => 
+                            isActive 
+                                ? "text-white text-2xl border-b-2 border-white"
+                                : "text-white text-2xl hover:text-gray-300"
+                        }
+                    >
+                        Abonnés
+                    </NavLink>
                 </div>
             </div>
         </nav>
