@@ -60,6 +60,7 @@ const Accueil = () => {
         <div className="mb-8">
           <input
             type="text"
+            id="search"
             placeholder="Rechercher un personnage"
             className="p-3 border-2 border-green-600 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300 ease-in-out"
             value={searchTerm}
