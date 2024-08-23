@@ -12,7 +12,7 @@ const Details = () => {
     const [showLocationDetails, setShowLocationDetails] = useState(false);
     const [residents, setResidents] = useState([]);
     const [episodes, setEpisodes] = useState([]);
-    const [showEpisodes, setShowEpisodes] = useState(false); // Initial state is false
+    const [showEpisodes, setShowEpisodes] = useState(false);
 
     useEffect(() => {
         const fetchCharacterDetails = async () => {
@@ -85,7 +85,7 @@ const Details = () => {
             <div className="container mx-auto max-w-screen-xl p-4">
                 <div className="text-center mb-10">
                     <h1 className="text-5xl font-bold text-white">
-                        {character ? character.name : 'Loading...'}
+                        {character ? character.name : 'Loading...'} <p className="text-3xl pt-4">Détails</p>
                     </h1>
                 </div>
                 {/* Accueil button */}
