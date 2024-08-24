@@ -31,7 +31,7 @@ const Details = () => {
                 setEpisodes(episodeDetails);
 
             } catch (error) {
-                console.error('Error fetching character details:', error);
+                console.error('Error fetch details', error);
             }
         };
 
@@ -60,7 +60,7 @@ const Details = () => {
                 );
                 setResidents(residentDetails);
             } catch (error) {
-                console.error('Error fetching location details:', error);
+                console.error('Error fetch details', error);
             }
         }
     };
