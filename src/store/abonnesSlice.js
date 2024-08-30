@@ -6,16 +6,6 @@ const abonnesSlice = createSlice({
     liste: [],
   },
   reducers: {
-    modifierAbonne: (state, action) => {
-      let nom = action.payload.nom;
-      let email = action.payload.email;
-      let index = action.payload.index;
-
-      if (index >= 0 && index < state.liste.length) {
-        state.liste[index].nom = nom;
-        state.liste[index].email = email;
-      }
-    },
     ajouterAbonne: (state, action) => {
       state.liste.push(action.payload);
     },
@@ -27,7 +17,7 @@ const abonnesSlice = createSlice({
   },
 });
 
-export const { modifierAbonne, ajouterAbonne, supprimerAbonne } =
+export const {  ajouterAbonne, supprimerAbonne } =
   abonnesSlice.actions;
 
 export default abonnesSlice.reducer;
