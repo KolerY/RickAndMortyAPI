@@ -36,7 +36,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="fixed bottom-0 left-0 w-full bg-gray-800 text-white py-2 flex items-center justify-between px-4">
+    <footer className="fixed bottom-0 left-0 w-full bg-gray-800/90 backdrop-blur-lg text-white py-2 flex items-center justify-between px-4">
       <p className="text-sm">&copy; 2024 Yannick Blanchette</p>
       <div className="flex items-center space-x-4">
         <h2 className="text-lg">Enregistrez-vous à notre infolettre</h2>
