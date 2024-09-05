@@ -20,13 +20,15 @@ const Abonner = () => {
         </div>
         <div className="grid grid-cols-1 gap-10">
           {listeAbonnes.map((abonne) => (
-            <div key={abonne.email} className="relative p-4 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg max-w-sm mx-auto border-4 border-gray-300">
-              {/* Logo at the middle top of the card */}
+            <div
+              key={abonne.email}
+              className="relative p-4 bg-gray-800 bg-opacity-90 rounded-lg shadow-lg max-w-sm mx-auto border-4 border-gray-300 transition-all duration-500 ease-in-out hover:border-black hover:shadow-xl hover:scale-105"
+            >
               <div className="absolute -top-8 left-1/2 transform -translate-x-1/2">
                 <CgProfile className="text-white text-6xl bg-gray-800 p-2 rounded-full border-4 border-gray-300" />
               </div>
 
-              <div className="flex justify-between items-center mt-12"> {/* Adding top margin to compensate for the icon */}
+              <div className="flex justify-between items-center mt-12">
                 <div className="flex flex-col">
                   <h1 className="text-lg font-bold text-white">Nom :</h1>
                   <p className="text-md text-white border-b-2 border-gray-300">{abonne.nom}</p>
