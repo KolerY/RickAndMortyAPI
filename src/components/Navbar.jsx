@@ -1,6 +1,8 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
 import Logo from '../assets/Rick_and_Morty.svg.png'
+import { FaHome } from "react-icons/fa";
+import { GiLetterBomb } from "react-icons/gi";
 
 const Navbar = () => {
     return (
@@ -11,7 +13,7 @@ const Navbar = () => {
                     <NavLink to="/"><img src={Logo} alt="Logo" className="w-80" /></NavLink>
                 </div>
                 {/* Navigation */}
-                <div className="space-x-8 font-bold">
+                <div className="flex items-center space-x-8 font-bold">
                     <NavLink 
                         to="/" 
                         className={({ isActive }) => 
@@ -21,7 +23,10 @@ const Navbar = () => {
                         }
                         end
                     >
-                        Accueil
+                        <span className='flex items-center space-x-2'>
+                            <FaHome />
+                            <span>Accueil</span>
+                        </span>
                     </NavLink>
                     <NavLink 
                         to="/abonner" 
@@ -31,7 +36,10 @@ const Navbar = () => {
                                 : "text-white text-2xl hover:text-gray-300"
                         }
                     >
-                        Abonnés
+                        <span className='flex items-center space-x-2'>
+                            <GiLetterBomb />
+                            <span>Abonnés</span>
+                        </span>
                     </NavLink>
                 </div>
             </div>
@@ -39,4 +47,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Navbar;
