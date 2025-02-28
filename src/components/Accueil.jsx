@@ -52,7 +52,7 @@ const Accueil = () => {
       <div className="container mx-auto max-w-screen-xl p-4">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-4">
-            Découvrez nos personnages!
+            Découvrez nos personnages
           </h1>
           <p className="text-lg text-gray-600">
             Explorer le monde fascinant de Rick et Morty.
